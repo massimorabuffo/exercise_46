@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario" />
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi" />
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  // code here
+  const formInput = document.getElementsByClassName("form-input");
+  
+  for(let i=0; i<formInput.length; i++){
+    console.log(formInput[i].value);
+  }
+
+  //Non so il perché, ma il ciclo for "classico" funziona, mentre il "forEach" no...
+
+  formInput.forEach(element => {
+    console.log(element.value);
+  });
+</script>
